@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588911029407.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2306111358",
+    "id" : "13123085",
+    "lastKnownWriteTime" : 1589006498,
+    "last_content_update" : 1589006498498,
+    "path" : "E:/DATA3888-Labs/Assignments/Ass 3/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "cursorPosition" : "17,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

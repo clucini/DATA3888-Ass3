@@ -1,0 +1,65 @@
+---
+title: "Discipline Assignment 3"
+author: "480366528"
+output: html_document
+---
+
+````{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE)
+```
+
+
+## Question
+The main question we'll be exploring today is: **How does the K Value in a KNN affect it's accuracy?**
+
+Under the hood, this question is actually asking, "how does the number of neighbours you are selecting in the KNN algorithm, affect it's classification performance"?
+
+## Approach
+To begin analysing the value of K, we need to setup an environment within which we can actually run a KNN, before we can begin to modify the KNN.
+
+For this, we'll need to introduce some data, and some classification task for that data.
+The data I've selected is a RNA-sequencing dataset, containing gene expression of 88 kidney transplant patients' cells. 
+This data was collected for the purposes of predicting a patient's likelyhood of developing graft rejection after a kidney transplant, so we'll be attempting to perform the same task in this report.
+
+I selected this data as it contains a large number of numerical data points, which is perfect, as KNN relies on using distance measurements.
+Although these distance measurements can be performed on categorical data, it does not provide the same granularity that numerical data with a high degree of precision provides. 
+
+Next, for the environment to run these tests, I used Shiny. 
+Shiny is a library for R which allows one to easily create interactive pages wherein you can take inputs and siaply information in much the same manner one would do in regular R, I.E, using ggplot or other forms of plotting. 
+Shiny can be hosted online as a regular website, and therefore allows any user to reproduce the output without needing to have R installed, let alone understanding R themselves.
+Given this ease of use, Shiny becomes the perfect tool for analysing our question in an easily reproducable manner. 
+
+Finally, the implementation:
+The final implementation gives the user a simple slider bar to change the value of K and a few buttons to control the displays.
+Additionally, there are 2 displays, one which shows the output of the most recent run of KNN, while the 2nd display stores previous runs, so that the user can compare different values of K on the same graph. 
+
+## Shortcomings
+The main issue with my approach was the lack of balanced classes within my data. As there was roughly a 75/25 split in the amount of yes and no outcomes, simply picking yes would result in an accuracy of ~75%. 
+
+KNN works by selecting the K nearest neighbours, and selects the class of the largest group within the selected points. With a low K, unless there is very well defined clusters, the accuracy will more or less approximate a random distribution, perhaps with some weighting on the distribution of the classes. 
+
+This trend also occurs with very high K, (>10, for these purposes), wherein it approximates it far more closely. This is because, with a high K, when there is a massive imbalance in class size, the largest class will simply have the most points, and therefore make up the largest % of any given point's neighbours. This is why the mean outcome for all k > 10 is 75%, the same as the % of the largest class.
+
+Additionally, there was one quirk with my implementation, which could be percieved as a positive or a negative. 
+The 2nd display, which stores the past runs, actually combines all runs with the same K. All this does it make the results more accurate, however, as it's not the intended purpose of the display, it is a weird quirk. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588752930292.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1783247025",
+    "id" : "3D574D2D",
+    "lastKnownWriteTime" : 1588997352,
+    "last_content_update" : 1588998668669,
+    "path" : "E:/DATA3888-Labs/Assignments/Ass 3/Ass3.rmd",
+    "project_path" : "Ass3.rmd",
+    "properties" : {
+        "cursorPosition" : "21,107",
+        "last_setup_crc32" : "",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
